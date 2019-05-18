@@ -21,7 +21,7 @@ module.exports = {
 	entry: './src/index',
 	output: {
 		path: CONSTANTS.outputPath,
-		publicPath: '/',
+		publicPath: '',
 		filename: CONSTANTS.jsBundleFileName
 	},
 	plugins: plugins,

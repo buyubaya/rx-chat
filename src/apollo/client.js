@@ -15,6 +15,7 @@ const wsLink = new WebSocketLink({
     uri: `wss://h-chat-server.herokuapp.com/graphql`,
     options: {
         reconnect: true,
+        timeout: 60000,
         // inactivityTimeout: 1000
     }  
 });

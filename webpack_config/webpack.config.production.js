@@ -1,4 +1,5 @@
 const TerserPlugin = require('terser-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CONSTANTS = require('./constants')('production');
 // Common Plugins
 const plugins = require('./webpack.plugins')(
@@ -50,7 +51,8 @@ module.exports = {
 				parallel: true,
 				cache: true,
 				sourceMap: true
-			})
+			}),
+			new OptimizeCSSAssetsPlugin({})
 		]
 	}
 };

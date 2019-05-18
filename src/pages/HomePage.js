@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Button, Input, Modal, Badge, Icon, Card, Tabs } from 'antd';
 import * as moment from 'moment';
 import * as _ from 'lodash';
@@ -120,6 +121,8 @@ class ChatPrivatePage extends Component {
                         }}
                     />
                 </Card>
+
+                <Link to='/inbox' className='link-admin-inbox' target='_blank'>Go to Admin Inbox</Link>
 
                 <Tabs
                     className='home-room-tabs'

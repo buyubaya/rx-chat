@@ -649,3 +649,23 @@ $icon-message-size: 30px;
 		display: none;
 	}
 }
+
+
+.link-admin-inbox {
+	display: block;
+	color: #fff;
+	background: $chatbox-msg-v2-color;
+	border: 1px solid $chatbox-msg-v2-color;
+	padding: 0.5rem 1rem;
+	margin-top: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	transition: 0.3s;
+
+	&:hover {
+		color: $chatbox-msg-v2-color;
+		background: #fff;
+		border: 1px solid $chatbox-msg-v2-color;
+	}
+}

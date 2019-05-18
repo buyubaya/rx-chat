@@ -68,6 +68,30 @@ module.exports = function(options){
 				'sass-loader'
 			]
 		},
+		// Less
+		{
+			test: /\.less$/,
+			use: (options.environment === 'production')
+			?
+			[
+				{
+					loader: MiniCssExtractPlugin.loader
+				},
+				'css-loader',
+				{
+					loader: 'less-loader',
+					options: {
+						javascriptEnabled: true
+					}
+				}
+			]
+			:
+			[
+				'style-loader',
+				'css-loader',
+				'less-loader'
+			]
+		},
 		// Fonts
 		{
 			test: /.(woff(2)?|eot|ttf)(\?[a-z0-9=\.]+)?$/,

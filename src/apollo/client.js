@@ -8,11 +8,11 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 
 
 const httpLink = new HttpLink({
-    uri: 'http://h-chat-server.herokuapp.com/graphql',
+    uri: 'https://h-chat-server.herokuapp.com/graphql',
 });
 
 const wsLink = new WebSocketLink({
-    uri: `ws://h-chat-server.herokuapp.com/graphql`,
+    uri: `wss://h-chat-server.herokuapp.com/graphql`,
     options: {
         reconnect: true,
         // inactivityTimeout: 1000
